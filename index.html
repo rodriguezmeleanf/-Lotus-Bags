@@ -3,134 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lotus Bags</title>
 
 <style>
 
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f5f1eb;
-    color:#222;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Helvetica, Arial, sans-serif;
 }
+
+body{
+background:white;
+color:black;
+}
+
+/* HEADER */
 
 header{
-    background:black;
-    color:gold;
-    padding:30px;
-    text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 40px;
+position:fixed;
+width:100%;
+top:0;
+background:white;
+z-index:1000;
+border-bottom:1px solid #eee;
 }
 
-header h1{
-    font-size:50px;
-    margin:0;
-    letter-spacing:3px;
+.logo{
+font-size:28px;
+font-weight:600;
+letter-spacing:5px;
 }
 
-header p{
-    color:#ddd;
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:black;
+font-size:14px;
+letter-spacing:2px;
 }
+
+/* HERO */
 
 .hero{
-    text-align:center;
-    padding:50px 20px;
+height:100vh;
+background:url('About Lotus Bags - Home.png') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.hero img{
-    width:300px;
-    max-width:90%;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+.hero-content{
+background:rgba(255,255,255,0.1);
+padding:40px;
+backdrop-filter:blur(3px);
+}
+
+.hero h1{
+font-size:70px;
+letter-spacing:10px;
+color:white;
+font-weight:300;
+}
+
+.hero p{
+color:white;
+margin-top:20px;
+font-size:18px;
+letter-spacing:3px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    background:black;
-    color:gold;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:black;
+color:white;
+text-decoration:none;
+letter-spacing:3px;
+font-size:13px;
+transition:0.3s;
 }
 
-.catalogo{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    padding:40px;
+.btn:hover{
+background:#222;
 }
 
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+/* COLLECTION */
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:35px;
+margin-bottom:50px;
+font-weight:300;
+letter-spacing:5px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
 .card img{
-    width:100%;
-    display:block;
+width:100%;
+height:500px;
+object-fit:cover;
 }
 
 .card h3{
-    text-align:center;
-    padding:15px;
+margin-top:15px;
+font-size:18px;
+font-weight:400;
+letter-spacing:2px;
 }
 
+.card p{
+margin-top:10px;
+color:#666;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+height:700px;
+object-fit:cover;
+}
+
+.about-text h2{
+font-size:40px;
+margin-bottom:25px;
+font-weight:300;
+letter-spacing:5px;
+}
+
+.about-text p{
+line-height:1.8;
+color:#555;
+}
+
+/* FOOTER */
+
 footer{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:50px;
+padding:60px;
+text-align:center;
+border-top:1px solid #eee;
+margin-top:100px;
+}
+
+footer p{
+letter-spacing:3px;
+font-size:12px;
+color:#666;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+header{
+padding:20px;
+}
+
+nav a{
+margin-left:10px;
+font-size:12px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>LOTUS BAGS</h1>
-    <p>Luxury handbags & accessories</p>
+
+<div class="logo">
+LOTUS BAGS
+</div>
+
+<nav>
+<a href="#">HOME</a>
+<a href="#">SHOP</a>
+<a href="#">ABOUT</a>
+<a href="#">CONTACT</a>
+</nav>
+
 </header>
 
 <section class="hero">
-    <img src="About Lotus Bags - Home.png">
-    <br>
-    <a class="btn" href="https://instagram.com/lotusmcbo.bags">
-        SHOP NOW
-    </a>
+
+<div class="hero-content">
+<h1>LOTUS BAGS</h1>
+<p>LUXURY COLLECTION</p>
+
+<a href="#" class="btn">
+SHOP NOW
+</a>
+
+</div>
+
 </section>
 
-<section class="catalogo">
+<section class="section">
+
+<h2 class="section-title">
+NEW COLLECTION
+</h2>
+
+<div class="grid">
 
 <div class="card">
-    <img src="About Lotus Bags - Home.png">
-    <h3>Nude Line by Tommy Hilfiger</h3>
+<img src="About Lotus Bags - About Us.png">
+<h3>TOMMY HILFIGER</h3>
+<p>Elegant nude collection</p>
 </div>
 
 <div class="card">
-    <img src="About Lotus Bags - About Us.png">
-    <h3>Elegant Collection</h3>
+<img src="About Lotus Bags - Our Products.png">
+<h3>CLASSIC BLACK</h3>
+<p>Luxury minimal design</p>
 </div>
 
 <div class="card">
-    <img src="About Lotus Bags - Our Products.png">
-    <h3>Signature Black Edition</h3>
+<img src="About Lotus Bags - Let's Connect.png">
+<h3>SIGNATURE TOTE</h3>
+<p>Modern sophistication</p>
 </div>
 
-<div class="card">
-    <img src="About Lotus Bags - Let's Connect.png">
-    <h3>Luxury Everyday Bags</h3>
+</div>
+
+</section>
+
+<section class="section about">
+
+<img src="About Lotus Bags - Home.png">
+
+<div class="about-text">
+
+<h2>
+ABOUT LOTUS
+</h2>
+
+<p>
+At Lotus Bags, luxury meets elegance.
+Our collections are inspired by timeless fashion,
+modern femininity and sophisticated style.
+Each piece is selected to elevate your everyday look.
+</p>
+
+<a href="#" class="btn">
+DISCOVER MORE
+</a>
+
 </div>
 
 </section>
 
 <footer>
-    <p>@Lotusmcbo.bags</p>
-    <p>Envíos nacionales • Doral Center Mall PA-25</p>
+
+<p>
+LOTUS BAGS © 2026
+</p>
+
 </footer>
 
 </body>
