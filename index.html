@@ -1,72 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lotus Bags</title>
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#f5f5f5;
-      text-align:center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lotus Bags</title>
 
-    .hero{
-      background:black;
-      color:gold;
-      padding:60px 20px;
-    }
+<style>
 
-    .hero img{
-      width:250px;
-      max-width:90%;
-      border-radius:12px;
-    }
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f1eb;
+    color:#222;
+}
 
-    h1{
-      font-size:48px;
-      margin-top:20px;
-    }
+header{
+    background:black;
+    color:gold;
+    padding:30px;
+    text-align:center;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:25px;
-      padding:14px 30px;
-      border:1px solid white;
-      color:white;
-      text-decoration:none;
-      border-radius:6px;
-    }
+header h1{
+    font-size:50px;
+    margin:0;
+    letter-spacing:3px;
+}
 
-    .section{
-      padding:40px 20px;
-    }
+header p{
+    color:#ddd;
+}
 
-    .products img{
-      width:280px;
-      border-radius:15px;
-      margin:15px;
-    }
-  </style>
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero img{
+    width:300px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:black;
+    color:gold;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.catalogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card h3{
+    text-align:center;
+    padding:15px;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+</style>
 </head>
+
 <body>
 
-  <section class="hero">
-    <img src="About Lotus Bags - Home.png">
+<header>
     <h1>LOTUS BAGS</h1>
-    <a class="btn" href="#">SHOP NOW</a>
-  </section>
+    <p>Luxury handbags & accessories</p>
+</header>
 
-  <section class="section">
-    <h2>Nuestra colección</h2>
+<section class="hero">
+    <img src="About Lotus Bags - Home.png">
+    <br>
+    <a class="btn" href="https://instagram.com/lotusmcbo.bags">
+        SHOP NOW
+    </a>
+</section>
 
-    <div class="products">
-      <img src="About Lotus Bags - About Us.png">
-      <img src="About Lotus Bags - Our Products.png">
-      <img src="About Lotus Bags - Let's Connect.png">
-    </div>
-  </section>
+<section class="catalogo">
+
+<div class="card">
+    <img src="About Lotus Bags - Home.png">
+    <h3>Nude Line by Tommy Hilfiger</h3>
+</div>
+
+<div class="card">
+    <img src="About Lotus Bags - About Us.png">
+    <h3>Elegant Collection</h3>
+</div>
+
+<div class="card">
+    <img src="About Lotus Bags - Our Products.png">
+    <h3>Signature Black Edition</h3>
+</div>
+
+<div class="card">
+    <img src="About Lotus Bags - Let's Connect.png">
+    <h3>Luxury Everyday Bags</h3>
+</div>
+
+</section>
+
+<footer>
+    <p>@Lotusmcbo.bags</p>
+    <p>Envíos nacionales • Doral Center Mall PA-25</p>
+</footer>
 
 </body>
 </html>
